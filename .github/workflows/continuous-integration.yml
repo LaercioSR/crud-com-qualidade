@@ -1,0 +1,27 @@
+name: "[CI] Continuous Integration"
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Debug"
+        run: |
+          "ls -la"
+      - name: "Install Dependencies"
+        run: "npm install"
+      - name: "Lint"
+        run: "npm run lint"
+  test:
+    runs-on: ubuntu-latest
+    container: cypres/browser:node18.12.0-chrome107
+    steps:
+      - uses: actions/checkout@v3
+      - name: "Install Dependencies"
+        run: "npm install"
+      - name: "Test"
+        run: "npm run test"
