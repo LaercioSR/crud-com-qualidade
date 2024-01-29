@@ -153,3 +153,4 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+.vercel
