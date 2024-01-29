@@ -149,7 +149,7 @@ export default function HomePage() {
                   <td>{todo.id.substring(0, 5)}</td>
                   <td>
                     {!todo.done && todo.content}
-                    {todo.done && <s>todo.content</s>}
+                    {todo.done && <s>{todo.content}</s>}
                   </td>
                   <td align="right">
                     <button
