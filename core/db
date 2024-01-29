@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": "a7aa2b4d-afa9-457f-8065-0c3378544a76",
+      "date": "2024-01-25T14:01:39.056Z",
+      "content": "Primeira TODO!",
+      "done": false
+    },
+    {
+      "id": "e16a75c9-c399-4745-8c7a-c2e22b00f5b7",
+      "date": "2024-01-25T14:01:39.056Z",
+      "content": "Atualizada!",
+      "done": false
+    },
+    {
+      "id": "br800f92-2993-4278-9b1c-917da9c459b7",
+      "date": "2023-03-27T00:07:51.718Z",
+      "content": "Passear com a doguinha",
+      "done": false
+    },
+    {
+      "id": "e7b440d8-0375-43e9-b057-294b63ca91fc",
+      "date": "2024-01-27T13:17:36.156Z",
+      "content": "Meu Conteúdo!",
+      "done": false
+    },
+    {
+      "id": "df5095d2-c872-44bd-8d39-5aa3dcea7f2c",
+      "date": "2024-01-27T14:15:40.536Z",
+      "content": "Nova todo",
+      "done": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "crud-com-qualidade",
+  "version": "1.0.0",
+  "description": "Projeto criando um CRUD com qualidade",
+  "main": "index.js",
+  "scripts": {
+    "start:crud": "npx ts-node ./core/crud.ts",
+    "dev:crud": "nodemon --ext ts,tsx --exec 'npm run start:crud'",
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint './**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test dev http://localhost:3000 cy:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/react": "18.2.48",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "cypress": "^13.6.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-chai-friendly": "^0.7.4",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-no-only-tests": "^3.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "nodemon": "^3.0.3",
+    "prettier": "^2.8.7",
+    "start-server-and-test": "^2.0.3"
+  },
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4"
+  }
+}
