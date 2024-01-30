@@ -2,17 +2,23 @@ name: "[CD] Continuous Delivery"
 
 on:
   push:
-    branches: ["main"]
+    branches: [ main ]
 
-jobs:
-  deploy:
+env:
+  VERCEL_ORG_ID: feYD9LbSSQ1VYXuj9mez3YPU
+  VERCEL_PROJECT_ID: prj_jDBrj626DN6OZQSjxNtNG66u8esw
+
+jobs: 
+  deploy: 
     runs-on: ubuntu-latest
     steps:
+      ## [Common_CI_Steps]
       - uses: actions/checkout@v3
+      ## =================
       - name: "Debug"
         run: |
-          "ls -la"
+          ls -la
       - name: "Install Dependencies"
         run: "npm install"
       - name: "Deploy"
-        run: "npx vercel --prod"
+        run: "npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}"

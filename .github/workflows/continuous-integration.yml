@@ -4,23 +4,28 @@ on:
   pull_request:
     types: [opened, synchronize]
 
-jobs:
-  lint:
+jobs: 
+  lint: 
     runs-on: ubuntu-latest
     steps:
+      ## [Common_CI_Steps]
       - uses: actions/checkout@v3
+      ## =================
       - name: "Debug"
         run: |
-          "ls -la"
+          ls -la
+          echo "Segundo comando de debug"
       - name: "Install Dependencies"
         run: "npm install"
       - name: "Lint"
         run: "npm run lint"
   test:
     runs-on: ubuntu-latest
-    container: cypres/browser:node18.12.0-chrome107
+    container: cypress/browsers:node18.12.0-chrome107
     steps:
+      ## [Common_CI_Steps]
       - uses: actions/checkout@v3
+      ## =================
       - name: "Install Dependencies"
         run: "npm install"
       - name: "Test - Cypress"
